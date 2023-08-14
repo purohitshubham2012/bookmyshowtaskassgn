@@ -1,0 +1,6 @@
+.videoContainer {
+  /* width: "100%"; */
+  grid-area: "video";
+  grid-column-start: 1;
+  grid-column-end: -1;
+}

@@ -1,0 +1,54 @@
+.cardContainer {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex: 1;
+  margin: 1.5em;
+  padding: 1em;
+  background-color: black;
+  position: relative;
+}
+
+.cardImage {
+  object-fit: cover;
+}
+
+.cardText {
+  margin-top: 1em;
+  text-align: left;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+}
+
+.releaseDateOverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 2.5em;
+  right: 2.5em;
+  /* font-size: 0.7em; */
+  width: 3em;
+  height: 3em;
+  border-radius: 1.5em;
+  color: white;
+  background-color: rgb(10, 235, 160);
+}
+
+.ratingsOverlay {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  position: absolute;
+  bottom: 6em;
+  right: 2em;
+  font-size: 0.8em;
+  /* width: 4em; */
+  /* height: 4em; */
+  /* border-radius: 2em; */
+  color: white;
+}

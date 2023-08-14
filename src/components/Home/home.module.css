@@ -1,0 +1,29 @@
+.parentHomeContainer {
+  background-color: black;
+}
+
+.videoPlayer {
+  width: "100%";
+  height: "20%";
+}
+
+.pageHeader {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  padding: 0.5em;
+}
+
+.headerLeft {
+  justify-content: flex-start;
+}
+
+.headerRight {
+  justify-content: flex-end;
+  /* background-color: green; */
+}

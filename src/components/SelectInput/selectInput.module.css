@@ -1,0 +1,10 @@
+.select {
+  margin: 0.6em;
+  padding: 0.5em;
+  border: 1;
+  border-radius: 0.3em;
+  border-style: solid;
+  border-color: rgb(10, 235, 160);
+  color: rgb(10, 235, 160);
+  background-color: black;
+}
