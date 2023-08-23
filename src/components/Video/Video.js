@@ -8,12 +8,12 @@ const Video = (props) => {
     getYoutubeVideoID(props.videoURL);
   }, [props.videoURL]);
 
+  // get the youtube video id from the trailer url
   const getYoutubeVideoID = (videoURL) => {
     let url = new URL(props.videoURL);
     let params = new URLSearchParams(url.search);
     let videoID = params.has("v") ? params.get("v") : " ";
     setVideoID(videoID);
-    console.log("params", videoID);
   };
 
   return (
@@ -28,6 +28,7 @@ const Video = (props) => {
     //   </video>
     // </div>
     <div className={styles.videoContainer}>
+      {/* iframe to play youtube videos since all trailers are youtube videos*/}
       <iframe
         width="100%"
         height="400"
