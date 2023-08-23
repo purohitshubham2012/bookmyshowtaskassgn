@@ -1,3 +1,4 @@
+// Parent grid component to list all the trailers cards. This is responsive too.
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import Video from "../Video/Video";
@@ -11,6 +12,7 @@ const Grid = (props) => {
     getGridCards(props.moviesData);
   }, [props.moviesData]);
 
+  // Create list of grid cards using reusable 'MovieCard' componnents.
   const getGridCards = (moviesData) => {
     let movieCards = Object.entries(moviesData).map(([key, movie]) => {
       return (
@@ -30,14 +32,15 @@ const Grid = (props) => {
     });
   };
 
+  // Handle the click on each MovieCard
   const handleMovieCardClick = async (cardKey, videoURL) => {
-    console.log("index", cardKey);
+    // get the index on the clicked card
     let cardPosindex = getMovieCardPosIndex(cardKey);
-    console.log("index", cardPosindex);
 
+    // get the list of MovieCard compoents plus the video element for the clicked card
     let newGridItems = await createNewGridItems(cardPosindex, videoURL);
-    console.log("udpatd grid items", newGridItems);
 
+    // update the input to the grid layout.
     setGridItems([...newGridItems]);
   };
 
@@ -47,6 +50,7 @@ const Grid = (props) => {
     });
   };
 
+  // insert the video element in the list of MovieCard componnents
   const createNewGridItems = (cardPosindex, videoURL) => {
     return new Promise((resolve, reject) => {
       let video = (

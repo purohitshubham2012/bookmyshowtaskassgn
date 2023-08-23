@@ -12,6 +12,7 @@ const Home = () => {
   const [languages, setLanguages] = useState([]);
 
   useEffect(() => {
+    // get all movies mock json data.
     getMockData()
       .then((mockData) => {
         setLanguages(mockData.languageList);
@@ -23,14 +24,14 @@ const Home = () => {
       });
   }, []);
 
+  // handle language change filter
   const onLangChangeHandler = (event) => {
-    console.log("clicked", event.target.value);
     let filteredMovies = getMoviesOnLanguage(event.target.value);
-    console.log("movies", filteredMovies);
 
     setFilteredMoviesData({ ...filteredMovies });
   };
 
+  // filter list of moview from the json data based on language
   const getMoviesOnLanguage = (language) => {
     let filteredMovies = Object.entries(moviesData).filter(([key, movie]) => {
       return movie.EventLanguage === language;

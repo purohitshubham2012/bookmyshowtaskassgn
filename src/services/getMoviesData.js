@@ -1,3 +1,4 @@
+// Service method to get all the trailers data.
 export const getMockData = async () => {
   return new Promise((resolve, reject) => {
     fetch("https://in.bmscdn.com/m6/static/interview-mock/data.json")
